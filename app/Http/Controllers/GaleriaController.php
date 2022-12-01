@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Imagenes;
 
 class GaleriaController extends Controller
 {
@@ -13,7 +14,8 @@ class GaleriaController extends Controller
      */
     public function index()
     {
-        return view('galeria.index');
+        $images = Imagenes::all();
+        return view('galeria.index', compact('images'));
     }
 
     /**
@@ -34,7 +36,12 @@ class GaleriaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $nameImage = $request->imagenes->getClientOriginalName();
+        $imagenes = new Imagenes();
+        $imagenes->imagenes = $nameImage;
+        $request->imagenes->move(public_path('images'), $nameImage);
+        $imagenes->save();
+        return redirect()->to('/galeria');
     }
 
     /**
