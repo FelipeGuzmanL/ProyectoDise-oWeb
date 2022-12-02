@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
+
     <div class="flex text-center">
 
         @foreach ($images as $row)
