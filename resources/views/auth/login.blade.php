@@ -15,7 +15,7 @@
                     <input type="password" class="form-control focus" placeholder="Password" id="password" name="password">
                 </div>
                 @error('message')
-                    <p class="p-2 mb-2 bg-danger text-white rounded">Error</p>
+                    <p class="p-2 mb-2 bg-danger text-white rounded">Usuario o Contraseña incorrectos</p>
                 @enderror
                 <button type="suybmit" class="btn btn-primary">Enviar</button>
             </form>

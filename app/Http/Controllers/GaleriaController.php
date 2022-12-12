@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Imagenes;
+use App\Models\Publicaciones;
 
 class GaleriaController extends Controller
 {
@@ -41,6 +42,7 @@ class GaleriaController extends Controller
         $imagenes->imagenes = $nameImage;
         $request->imagenes->move(public_path('images'), $nameImage);
         $imagenes->save();
+        Publicaciones::create(array_merge($request->only('titulo','descripcion','id_imagen'),['id_imagen'=>$imagenes->id]));
         return redirect()->to('/galeria');
     }
 
