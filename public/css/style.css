@@ -18,7 +18,7 @@ body {
 
 
 .container .card{
-    background-color: aquamarine;
+    background-color: white;
 }
 
 .flex.text-center {
@@ -46,4 +46,30 @@ body {
         --num-cols: 2;
         --row-height: 200px;
     }
+}
+
+div.galeria {
+    margin: 10px 20px;
+    /*box-shadow: 0 2px 4px 0 lightskyblue, 0 3px 10px 0 rgba(0,0,0,0.19);*/
+    float: left;
+    width: 350px;
+}
+
+div.galeria img{
+    width: 100%;
+    height: auto;
+}
+
+div.galeria:hover {
+    border: 5px solid darkblue;
+    border-radius: 5px;
+    /*transform: rotate(-3deg);*/
+}
+
+div.pie {
+    text-align: center;
+    /*text-shadow: 2px 2px 5px black;*/
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
 }

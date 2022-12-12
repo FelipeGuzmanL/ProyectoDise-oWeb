@@ -37,6 +37,16 @@ class GaleriaController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate(request(), [
+            'titulo' => 'required',
+            'descripcion' => 'required',
+            'imagenes' => 'required',
+        ],[
+            'titulo.required' => 'Título es requerido',
+            'descripcion.required' => 'Descripción es requerida',
+            'imagenes.required' => 'Agregue la imagen a subir'
+        ]);
+
         $nameImage = $request->imagenes->getClientOriginalName();
         $imagenes = new Imagenes();
         $imagenes->imagenes = $nameImage;
