@@ -1,9 +1,30 @@
 body {
     height: 100vh;
-    background-image: url('../images/background/5073414.jpg');
+    background-image: url('../images/background/fondoblanco.jpg');
     background-repeat: repeat;
     background-size: cover;
     font-family: 'Century Gothic', sans-serif;
+}
+
+.navbar-brand img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.navbar.navbar-expand-lg li a{
+    color: black;
+}
+
+.nav-link-me {
+    color: black
+}
+
+
+.nav-item {
+    font-size: 100%;
+    font-weight: bolder;
+    text-transform: uppercase;
 }
 
 .selector-for-some-widget {
@@ -23,11 +44,11 @@ body {
 
 .box {
     width: 60%;
-    background:  rgba(0,0,0,.4);
+    background:  rgba(235, 255, 252, 0.4);
     margin: 0 auto;
     margin-top: 4%;
     padding: 20px;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
     border-radius: 15px;
 }
@@ -65,7 +86,7 @@ body {
 
 
 .box ul li a{
-    color: white;
+    color: black;
     font-size: 45px;
     padding: 10px 5px;
     display: block;
@@ -113,25 +134,26 @@ body {
     }
 }
 
-div.galeria {
+.galeria {
     margin: 10px 20px;
     /*box-shadow: 0 2px 4px 0 lightskyblue, 0 3px 10px 0 rgba(0,0,0,0.19);*/
     float: left;
     width: 350px;
+    margin-bottom: 15px;
 }
 
-div.galeria img{
+.galeria img{
     width: 100%;
     height: auto;
 }
 
-div.galeria:hover {
-    border: 5px solid darkblue;
+.galeria:hover {
+    border: 5px solid aquamarine;
     border-radius: 5px;
     /*transform: rotate(-3deg);*/
 }
 
-div.pie {
+.pie {
     text-align: center;
     /*text-shadow: 2px 2px 5px black;*/
     padding: 10px;
@@ -142,3 +164,224 @@ div.pie {
 .card{
     width: 50%;
 }
+
+.pie-pagina {
+    width: 100%;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box2 figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box2 figure img{
+    width: 200px;
+    border-radius: 50%;
+}
+
+.pie-pagina .grupo-1 .box2 h2 {
+    color: black;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+.pie-pagina .grupo-1 .box2 p {
+    color: black;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a {
+    display: inline-block;
+    color: black;
+    font-size: 45px;
+    padding: 1px 5px;
+    transition: all 0.5s ease-in-out ;
+}
+
+.pie-pagina .grupo-1 .red-social a :hover {
+    color: #b9b9b9;
+    transform: scale(1.1);
+}
+
+.pie-pagina .grupo-2 {
+    background-color: #DEDEDE;
+    padding: 15px 10px;
+    text-align: center;
+    color: black;
+}
+
+.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
+
+.boton .btn {
+    border-color: aquamarine;
+    background-color: aquamarine;
+    color: rgb(88, 88, 88);
+    font-weight: bolder;
+}
+
+.login form .campo {
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 15px;
+    border: 1px solid #b9b9b9;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    outline: 0px;
+}
+
+
+.login .titulo {
+    color: black;
+}
+
+.login .btn {
+    border-color: aquamarine;
+    background-color: aquamarine;
+    color: rgb(88, 88, 88);
+    font-weight: bolder;
+    width: 30%;
+}
+
+.register form .campo {
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 15px;
+    border: 1px solid #b9b9b9;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    outline: 0px;
+}
+
+.register form p .campo{
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 15px;
+    border: 1px solid #b9b9b9;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    outline: 0px;
+}
+
+.register .titulo {
+    color: black;
+}
+
+.register .btn {
+    border-color: aquamarine;
+    background-color: aquamarine;
+    color: rgb(88, 88, 88);
+    font-weight: bolder;
+    width: 30%;
+}
+
+.copyright .grupo-2 {
+    background-color: #DEDEDE;
+    padding: 15px 10px;
+    text-align: center;
+    color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
+
+.container-form {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    margin-top: 90px;
+}
+
+.container-form p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}
+
+.container-form a {
+    font-size: 17px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 15px;
+    color: black;
+    font-weight: 700;
+}
+
+.container-form a i {
+    color: black;
+    margin-right: 10px;
+}
+
+.container-form form .campo, textarea {
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 15px;
+    border: 1px solid #b9b9b9;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    outline: 0px;
+}
+
+.container-form .btn {
+    border-color: aquamarine;
+    background-color: aquamarine;
+    color: rgb(88, 88, 88);
+    font-weight: bolder;
+    width: 30%;
+}
+
+.container-form2 {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    grid-gap: 50px;
+    margin-top: 90px;
+    text-align: center;
+}
+
+.container-form2 form .campo, textarea {
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 15px;
+    border: 1px solid #b9b9b9;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    outline: 0px;
+}
+
+.container-form2 .btn {
+    border-color: aquamarine;
+    background-color: aquamarine;
+    color: rgb(88, 88, 88);
+    font-weight: bolder;
+    width: 30%;
+}
+

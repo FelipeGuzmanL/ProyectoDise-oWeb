@@ -18,9 +18,9 @@
 <body>
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">Rustic MG</a>
+            <a class="navbar-brand" href="/"><img src="/images/logo.jfif" alt="Logo Rustic MG"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -44,23 +44,24 @@
                 <ul class="navbar-nav me-end mb-2 mb-lg-0">
                     @if(auth()->check())
                         <li class="nav-item">
-                            <p class="nav-link">Welcome <b>{{ auth()->user()->name }}</b></p>
+                            <p class="nav-link-me">Welcome <b>{{ auth()->user()->name }}</b></p>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('login.destroy') }}" class="nav-link navbar-brand text-danger">Log Out</a>
                         </li>
                     @else
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login.index')}}">Log In</a>
+                            <a class="nav-link" href="{{ route('login.index')}}">Iniciar Sesion</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('register.index') }}" class="nav-link navbar-brand">Register</a>
+                            <a href="{{ route('register.index') }}" class="nav-link navbar-brand">Registrarse</a>
                         </li>
                     @endif
                 </ul>
             </div>
         </div>
     </nav>
+
     @yield('content')
 
 </body>

@@ -2,36 +2,31 @@
 @section('content')
 <section class="d-flex justify-content-center">
     <div>
-        <div class="mb-3 text-white text-center">
-            <h1>Register</h1>
+        <div class="titulo text-center">
+            <h1>Registrarse</h1>
         </div>
-        <div class="mb-2">
+        <div class="register">
             <form method="POST" action="">
-                @csrf
-                <div class="form-group mb-2">
-                    <input type="name" class="form-control focus" placeholder="Nombre" id="name" name="name">
+                <div style="text-align: center">
+                    @csrf
+                    <input type="name" class="campo focus" placeholder="Nombre" id="name" name="name">
+                    @error('name')
+                        <p class="campo bg-danger text-white">{{ $message }}</p>
+                    @enderror
+                    <input type="email" class="campo" placeholder="Email" id="email" name="email">
+                    @error('email')
+                        <p class="campo bg-danger text-white">{{ $message }}</p>
+                    @enderror
+                    <input type="password" class="campo" placeholder="Contraseña" id="password" name="password">
+                    @error('password')
+                        <p class="campo bg-danger text-white">{{ $message }}</p>
+                    @enderror
+                    <input type="password" class="campo" placeholder="Confirme Contraseña" id="password_confirmation" name="password_confirmation">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
                 </div>
-                @error('name')
-                    <p class="p-2 mb-2 bg-danger text-white rounded">{{ $message }}</p>
-                @enderror
-                <div class="form-group mb-2">
-                    <input type="email" class="form-control focus" placeholder="Email" id="email" name="email">
-                </div>
-                @error('email')
-                    <p class="p-2 mb-2 bg-danger text-white rounded">{{ $message }}</p>
-                @enderror
-                <div class="form-group mb-2">
-                    <input type="password" class="form-control focus" placeholder="Password" id="password" name="password">
-                </div>
-                @error('password')
-                    <p class="p-2 mb-2 bg-danger text-white rounded">{{ $message }}</p>
-                @enderror
-                <div class="form-group mb-2">
-                    <input type="password" class="form-control focus" placeholder="Password Confirmation" id="password_confirmation" name="password_confirmation">
-                </div>
-                <button type="suybmit" class="btn btn-primary">Enviar</button>
             </form>
         </div>
     </div>
 </section>
+@include('copyright')
 @endsection

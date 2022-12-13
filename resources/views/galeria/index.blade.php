@@ -23,6 +23,5 @@
 
     @endforeach
 
-
-
+@include('footer')
 @endsection
