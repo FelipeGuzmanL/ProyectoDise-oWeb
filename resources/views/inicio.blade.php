@@ -23,7 +23,9 @@
          alt="" class="box-img">
          <h1>Rustic MG</h1>
          <h2>Empresa de muebles</h2>
-         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto natus quos quibusdam enim laborum asperiores perspiciatis possimus voluptas? Veniam fuga nobis ex incidunt deserunt ut debitis voluptates esse ducimus maiores?</p>
+         <p>Somos una empresa dedicación a crear espacios soñados de tu hogar que valora la importancia de lo inmobiliario dentro y fuera de tu hogar a través de la fabricación de muebles  rústicos y vintage productos de diseño y decoración personalizada creando arte en los muebles para nuestros cliente.
+            <br>
+            Todo en base a maderas, melamina, reciclaje de maderas nativas y también principalmente de Pallet , con lo que esperamos aportar positivamente en nuestro planeta.</p>
          <ul>
             <li><a href="https://www.facebook.com/people/rustic_mg/100081050527630/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a></li>
             <li><a href="https://www.instagram.com/rustic_mg/?utm_medium=copy_link&hl=es-la" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>

@@ -2,14 +2,14 @@
     <div class="grupo-1">
       <div class="box2">
         <figure>
-          <a href="#">
+          <a href="/">
             <img src="/images/logo.jfif" alt="Logo Rustic MG">
           </a>
         </figure>
       </div>
       <div class="box2">
         <h2>SOBRE NOSOTROS</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam unde dolores, itaque voluptate quisquam quae nobis ullam cum deserunt iure laudantium vitae vero aliquam perspiciatis corporis fugit! Harum, corrupti earum!</p>
+        <p>Somos una empresa dedicación a crear espacios soñados de tu hogar que valora la importancia de lo inmobiliario dentro y fuera de tu hogar a través de la fabricación de muebles  rústicos y vintage productos de diseño y decoración personalizada creando arte en los muebles para nuestros cliente.</p>
       </div>
       <div class="box2">
         <h2>SIGUENOS</h2>
@@ -23,3 +23,4 @@
       <small>&copy; 2022, <b>Rustic MG</b> - Todos los derechos reservados.</small>
     </div>
 </footer>
+

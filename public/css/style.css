@@ -1,9 +1,14 @@
 body {
     height: 100vh;
     background-image: url('../images/background/fondoblanco.jpg');
+    background-color: #b9b9b9;
     background-repeat: repeat;
     background-size: cover;
     font-family: 'Century Gothic', sans-serif;
+}
+
+.navbar {
+    background-color: white;
 }
 
 .navbar-brand img{
@@ -300,6 +305,15 @@ body {
     height: 50px;
 }
 
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}
+
 .container-form {
     width: 100%;
     max-width: 1200px;
@@ -314,15 +328,6 @@ body {
     font-size: 17px;
     line-height: 1.6;
     margin-bottom: 30px;
-}
-
-@media screen and (max-width:800px){
-    .pie-pagina .grupo-1 {
-        width: 90%;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 30px;
-        padding: 35px 0px;
-    }
 }
 
 .container-form a {
@@ -383,5 +388,80 @@ body {
     color: rgb(88, 88, 88);
     font-weight: bolder;
     width: 30%;
+}
+
+@media screen and (max-width:800px){
+    .container-form {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+    .container-form p {
+        font-size: 17px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+
+    .container-form a {
+        font-size: 17px;
+        display: inline-block;
+        text-decoration: none;
+        width: 100%;
+        margin-bottom: 15px;
+        color: black;
+        font-weight: 700;
+    }
+
+    .container-form a i {
+        color: black;
+        margin-right: 10px;
+    }
+
+    .container-form form .campo, textarea {
+        width: 90%;
+        padding: 15px 10px;
+        font-size: 15px;
+        border: 1px solid #b9b9b9;
+        margin-bottom: 20px;
+        border-radius: 3px;
+        outline: 0px;
+    }
+
+    .container-form .btn {
+        border-color: aquamarine;
+        background-color: aquamarine;
+        color: rgb(88, 88, 88);
+        font-weight: bolder;
+        width: 30%;
+    }
+
+    .container-form2 {
+        width: 90%;
+        max-width: 800px;
+        margin: auto;
+        grid-gap: 50px;
+        margin-top: 90px;
+        text-align: center;
+    }
+
+    .container-form2 form .campo, textarea {
+        width: 90%;
+        padding: 15px 10px;
+        font-size: 15px;
+        border: 1px solid #b9b9b9;
+        margin-bottom: 20px;
+        border-radius: 3px;
+        outline: 0px;
+    }
+
+    .container-form2 .btn {
+        border-color: aquamarine;
+        background-color: aquamarine;
+        color: rgb(88, 88, 88);
+        font-weight: bolder;
+        width: 30%;
+    }
+
 }
 
