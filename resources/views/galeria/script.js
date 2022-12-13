@@ -1,5 +1,3 @@
-require('./bootstrap');
-
 const FullImgBox = document.getElementById("fullImgBox"),
 fullImg = doicument.getElementById("fullimg");
 

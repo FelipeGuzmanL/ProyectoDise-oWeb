@@ -9,7 +9,7 @@
       </div>
       <div class="box2">
         <h2>SOBRE NOSOTROS</h2>
-        <p>Somos una empresa dedicación a crear espacios soñados de tu hogar que valora la importancia de lo inmobiliario dentro y fuera de tu hogar a través de la fabricación de muebles  rústicos y vintage productos de diseño y decoración personalizada creando arte en los muebles para nuestros cliente.</p>
+        <p>Somos una empresa dedicada a crear espacios soñados de tu hogar que valora la importancia de lo inmobiliario dentro y fuera de tu hogar a través de la fabricación de muebles  rústicos y vintage productos de diseño y decoración personalizada creando arte en los muebles para nuestros cliente.</p>
       </div>
       <div class="box2">
         <h2>SIGUENOS</h2>

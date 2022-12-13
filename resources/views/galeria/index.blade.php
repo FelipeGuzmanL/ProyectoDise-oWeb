@@ -1,27 +1,25 @@
 @extends('layouts.app')
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('css/style.css')}}">
-
-
-    <!--<div class="flex text-center">
-
+    <h1>Galería de Diseños</h1>
+    <div class="galeria-img">
         @foreach ($images as $row)
-            <img class="img-fluid rounded img-thumbnail" src="images/{{ $row->imagenes}}" alt="Image">
+            <a href="#image{{$row->id}}"><img class="img-fluid rounded img-thumbnail" src="images/{{ $row->imagenes}}" alt="Image"></a>
         @endforeach
-    </div>-->
-    @foreach ($images as $row)
-        <div class="galeria">
-            <div class="foto">
-                <img class="img-fluid rounded img-thumbnail" src="images/{{ $row->imagenes}}" alt="Image">
-            </div>
-            <div class="pie">
-                <h3>{{ $row->publicacion->titulo }}</h3>
-                <p>{{ $row->publicacion->descripcion }}</p>
-            </div>
-        </div>
+    </div>
 
+    @foreach ($images as $item)
+        <article class="light-box" id="image{{$item->id}}">
+            <a href="#image{{$item->id-1}}" class="next"><i class="fa-solid fa-arrow-left"></i></a>
+            @foreach ($images as $i => $imagenes)
+                @if ($i<=0)
+                    <img src="images/{{ $item->imagenes}}" alt="">
+                @endif
+            @endforeach
+            <a href="#image{{$item->id+1}}" class="next"><i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#" class="close">X</a>
+        </article>
     @endforeach
 
-@include('footer')
+    @include('footer')
 @endsection
