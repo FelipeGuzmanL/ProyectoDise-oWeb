@@ -7,6 +7,13 @@ use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 
+
+Route::get('/clear-cache', function () {
+    echo Artisan::call('config:clear');
+    echo Artisan::call('config:cache');
+    echo Artisan::call('cache:clear');
+    echo Artisan::call('route:clear');
+ });
 Route::get('/', [InicioController::class, 'index'])->name('inicio.index');
 Route::get('/galeria', [GaleriaController::class, 'index']);
 Route::get('/galeria/create', [GaleriaController::class, 'create']);
