@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Mail\ContactoRusticMG;
+use Illuminate\Support\Facades\Mail;
 
 class ContactoController extends Controller
 {
@@ -34,7 +36,15 @@ class ContactoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nombre' => 'required',
+            'correo' => 'required|email',
+            'mensaje' => 'required',
+        ]);
+        $correo = new ContactoRusticMG($request->all());
+        Mail::to('contacto@rusticmg.cl')->send($correo);
+
+        return redirect()->route('contacto.index')->with('info', 'Mensaje enviado');
     }
 
     /**

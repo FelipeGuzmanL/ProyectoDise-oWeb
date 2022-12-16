@@ -9,11 +9,11 @@
             <form method="POST" action="">
                 <div style="text-align: center">
                     @csrf
-                    <input type="name" class="campo focus" placeholder="Nombre" id="name" name="name">
+                    <input type="name" class="campo focus" placeholder="Nombre" id="name" name="name" value="{{ old('name')}}">
                     @error('name')
                         <p class="campo bg-danger text-white">{{ $message }}</p>
                     @enderror
-                    <input type="email" class="campo" placeholder="Email" id="email" name="email">
+                    <input type="email" class="campo" placeholder="Email" id="email" name="email" value="{{ old('email')}}">
                     @error('email')
                         <p class="campo bg-danger text-white">{{ $message }}</p>
                     @enderror

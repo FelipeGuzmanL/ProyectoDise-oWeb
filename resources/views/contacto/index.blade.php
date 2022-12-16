@@ -11,15 +11,31 @@
             <a href="#"><i class="fa-solid fa-phone"></i> +569 53666357</a>
             <a href="#"><i class="fa-solid fa-envelope"></i> contacto@rusticmg.cl</a>
         </div>
-        <form action="#" autocomplete="off">
+        <form action="{{ route('contacto.store') }}" autocomplete="off" method="POST">
+            @csrf
             <div style="text-align: center">
-                <input type="text" class="campo" name="nombre" id="nombre" placeholder="Nombre">
-                <input type="text" class="campo" name="apellido" id="apellido" placeholder="Apellido">
-                <input type="text" class="campo" name="correo" id="correo" placeholder="Correo">
+                <input type="text" class="campo" name="nombre" id="nombre" placeholder="Nombre" value="{{ old('nombre')}}">
+                @error('nombre')
+                    <p class="p-2 mb-2 bg-danger text-white rounded">Nombre es requerido</p>
+                @enderror
+                <input type="text" class="campo" name="correo" id="correo" placeholder="Correo" value="{{ old('correo')}}">
+                @error('correo')
+                    <p class="p-2 mb-2 bg-danger text-white rounded">Email incorrecto</p>
+                @enderror
                 <textarea type="text" class="texarea" name="mensaje" id="mensaje" placeholder="Mensaje"></textarea>
-                <button class="btn btn-primary">Enviar</button>
+                @error('mensaje')
+                    <p class="p-2 mb-2 bg-danger text-white rounded">Escriba el mensaje</p>
+                @enderror
+                <button class="btn btn-primary" type="submit">Enviar</button>
             </div>
         </form>
+
+
+        @if (session('info'))
+            <script>
+                alert("{{session('info')}}");
+            </script>
+        @endif
     </div>
 
 
