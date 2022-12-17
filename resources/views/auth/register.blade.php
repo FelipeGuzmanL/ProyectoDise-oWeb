@@ -11,17 +11,17 @@
                     @csrf
                     <input type="name" class="campo focus" placeholder="Nombre" id="name" name="name" value="{{ old('name')}}">
                     @error('name')
-                        <p class="campo bg-danger text-white">{{ $message }}</p>
+                        <p class="campo bg-danger text-white">Ingrese su nombre</p>
                     @enderror
                     <input type="email" class="campo" placeholder="Email" id="email" name="email" value="{{ old('email')}}">
                     @error('email')
-                        <p class="campo bg-danger text-white">{{ $message }}</p>
+                        <p class="campo bg-danger text-white">Ingrese su correo</p>
                     @enderror
                     <input type="password" class="campo" placeholder="Contraseña" id="password" name="password">
-                    @error('password')
-                        <p class="campo bg-danger text-white">{{ $message }}</p>
-                    @enderror
                     <input type="password" class="campo" placeholder="Confirme Contraseña" id="password_confirmation" name="password_confirmation">
+                    @error('password')
+                        <p class="campo bg-danger text-white">Las contraseñas no coinciden</p>
+                    @enderror
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </div>
             </form>
